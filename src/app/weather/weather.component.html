@@ -1,7 +1,7 @@
 <!-- input -->
 <div>
-<input type="text">
-<button type="submit">Invia</button>
+<input type="text" [(ngModel)]='city'>
+<button type="submit" (click)="search(city)">Invia</button>
 </div>
 <!-- meteo -->
 <div>
