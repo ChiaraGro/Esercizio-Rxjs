@@ -15,7 +15,8 @@ export class WeatherService {
     const params = new HttpParams()
     .set('q', city)
     .set('appid', '5a23354bd4bdff2b23ee8bc457577ebd')
-    .set('unit', 'metric')
+    .set('units', 'metric')
+    .set('lang', 'it')
 
     return this.http.get<Weather>(environment.apiUrl, {params});
   }

@@ -5,9 +5,10 @@
 </div>
 <!-- meteo -->
 <div>
-  <h1>Nome</h1>
-  <h3>temp</h3>
-  <p>data</p>
-  <p>descrizione</p>
-  <!-- icona img -->
+  <h1>{{weather.name}}</h1>
+  <h3>{{weather.main.temp |number: '1.0-0' }} °C</h3>
+  <p>{{weather.timezone}}</p>
+  <!-- modificare data -->
+  <p>{{weather.weather[0].description |titlecase}}</p>
+  <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="icona">
 </div>
