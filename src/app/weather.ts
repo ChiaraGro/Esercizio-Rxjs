@@ -1,6 +1,6 @@
 export interface Weather {
   name: string;
-  timezone: number;
+  timezone: number; //cambiare con date??
   weather:[{
     icon: string;
     description: string;
