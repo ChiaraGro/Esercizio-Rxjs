@@ -19,5 +19,6 @@ export class WeatherService {
     .set('lang', 'it')
 
     return this.http.get<Weather>(environment.apiUrl, {params});
+    //return this.http.get<Weather>(environment.apiUrl, {params}).pipe(map(response => response.find(weather => weather.name == city)))
   }
 }

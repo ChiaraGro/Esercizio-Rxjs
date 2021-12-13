@@ -10,7 +10,6 @@ import { WeatherService } from '../weather.service';
 export class WeatherComponent implements OnInit {
   weather!: Weather;
   city!: string;
-
   date!: Date;
 
   constructor(private weatherService: WeatherService) { }

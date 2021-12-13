@@ -7,13 +7,13 @@
 
 <div class="d-flex mt-3">
 <input type="text" [(ngModel)]='city' placeholder="Inserisci una città" class="form-control w-25">
-<button type="submit" (click)="search(city)" class="btn btn-outline-primary">Invia</button>
+<button type="submit" (click)="search(city)" class="btn btn-outline-primary mx-1">Invia</button>
 </div>
 <!-- meteo -->
-<div *ngIf="weather">
+<div *ngIf="weather" class="container mt-3">
   <h1>{{weather.name}}</h1>
   <h3>{{weather.main.temp |number: '1.0-0' }} °C</h3>
-  <p>{{date |date: 'fullDate'}}</p>
+  <p>{{date |date: 'shortDate'}}</p>
   <!-- correggere data -->
   <p>{{weather.weather[0].description |titlecase}}</p>
   <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png" alt="icona">
