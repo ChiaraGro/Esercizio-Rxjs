@@ -8,6 +8,6 @@ export interface Weather {
   main: {
     temp: number;
   }
-  dt: number;
+  dt: Date;
 
 }
