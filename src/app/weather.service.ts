@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Weather } from './weather';
-import { find, map } from "rxjs/operators";
+import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +19,9 @@ export class WeatherService {
     .set('units', 'metric')
     .set('lang', 'it')
 
-    return this.http.get<Weather>(environment.apiUrl, {params});
-    //return this.http.get<Weather>(environment.apiUrl, {params}).pipe(map(response => response(find ((weather: Weather )=> weather.name == city))
-      //))
+    // return this.http.get<Weather>(environment.apiUrl, {params});
+    return this.http.get<Weather>(environment.apiUrl, {params}).pipe(
+      map(response => response)
+    )
   }
 }
